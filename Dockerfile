@@ -1,10 +1,8 @@
-FROM ubuntu:14.04
+#FROM ubuntu:14.04
+FROM joecliff/ubuntu
 MAINTAINER Frank Wu wj320@qq.com
 
-# install essential packages
-RUN \
-  apt-get -y update && \
-  apt-get -y install python g++ make wget 
+RUN apt-get -y update 
 
 # install nodejs
 RUN \
@@ -18,4 +16,8 @@ RUN \
   CXX="g++ -Wno-unused-local-typedefs" make install && \
   cd /tmp && \
   rm -rf /tmp/node-* 
+
+# essential modules
+RUN \
+  npm install -g grunt-cli
 

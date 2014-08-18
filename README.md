@@ -10,3 +10,9 @@ Get it from Docker Hub
 ```
 docker pull joecliff/nodejs-harmony
 ```
+
+Build by yourself
+------
+```
+docker build --rm -t joecliff/nodejs-harmony .
+```

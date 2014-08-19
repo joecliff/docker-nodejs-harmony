@@ -19,5 +19,5 @@ RUN \
 
 # essential modules
 RUN \
-  npm install -g grunt-cli
-
+  npm install -g grunt-cli && \
+  npm install forever -g
